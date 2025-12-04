@@ -138,68 +138,397 @@
     </div>
 </div>
 
-        <!-- kaidah Nahwu Section -->
-<div id="section-kaidah" class="tab-content">
-    <div class="card glass rounded-3xl p-8 mb-8 shadow-xl animate-fadeInUp" style="animation-delay: 0.4s">
+<!-- ============================
+        SECTION: KAIDAH BAB 3
+   ============================ -->
+<div id="section-kaidah" class="tab-content hidden">
+
+    <div class="card glass rounded-3xl p-8 shadow-xl animate-fadeInUp">
 
         <div class="flex items-center justify-between mb-6">
-            <h2 class="text-3xl font-bold gradient-text">Kaidah  </h2>
-            <span class="text-5xl icon-bounce">📄</span>
+            <h2 class="text-3xl font-bold gradient-text">Kaidah Nahwu: Adawatul Istifham (Kata Tanya)</h2>
+            <span class="text-5xl icon-bounce">❓</span>
         </div>
 
-         
-            
-        </p>
+        <div class="space-y-10">
 
-        <!-- PDF VIEWER -->
-        <div class="w-full bg-gray-200 rounded-2xl overflow-hidden shadow-lg" style="height: 600px;">
-            <iframe 
-                src="../pdf/kaidah-3.pdf" 
-                class="w-full h-full"
-                frameborder="0">
-            </iframe>
-        </div>
+            <!-- DEFINISI -->
+            <div class="bg-purple-50 p-6 rounded-2xl shadow border-l-4 border-purple-500">
+                <h3 class="text-xl font-bold text-purple-700 mb-3">📘 Definisi Adawatul Istifham</h3>
 
-        <!-- Catatan -->
-        <div class="bg-white rounded-2xl p-6 shadow-inner mt-6">
-            <h3 class="text-xl font-bold text-gray-800 mb-3 flex items-center gap-2">
-                <span>📌</span> Catatan
-            </h3>
-        </div>
-
-    </div>
-</div>
-
-
-
-        <!-- Teks Bacaan Section -->
-        <div id="section-bacaan" class="tab-content hidden">
-            <div class="card glass rounded-3xl p-8 mb-8 shadow-xl animate-fadeInUp">
-                <div class="flex items-center justify-between mb-6">
-                    <h2 class="text-3xl font-bold gradient-text">Teks Bacaan</h2>
-                    <span class="text-5xl icon-bounce">📖</span>
+                <div class="arabic-text text-2xl font-bold mb-3">
+                    أَدَوَاتُ الاِسْتِفْهَامِ هِيَ كَلِمَاتٌ تُسْتَعْمَلُ لِطَرْحِ الأَسْئِلَةِ
                 </div>
-                
-                <div class="w-full bg-gray-200 rounded-2xl overflow-hidden shadow-lg" style="height: 600px;">
-            <iframe 
-                src="../pdf/teks bacaan adawatu.pdf" 
-                class="w-full h-full"
-                frameborder="0">
-            </iframe>
-        </div>
 
-        <!-- Catatan -->
-        <div class="bg-white rounded-2xl p-6 shadow-inner mt-6">
-            <h3 class="text-xl font-bold text-gray-800 mb-3 flex items-center gap-2">
-                <span>📌</span> Catatan
-            </h3>
-        </div>
+                <p class="text-gray-700 mb-4">
+                    <strong>Definisi:</strong> Adawatul Istifham adalah kata tanya yang digunakan untuk mengajukan pertanyaan.
+                </p>
 
+                <div class="bg-white p-4 rounded-xl shadow-inner">
+                    <h4 class="font-semibold text-purple-700 mb-2">Fungsinya:</h4>
+                    <ul class="list-disc list-inside text-gray-700 space-y-1">
+                        <li>Menanyakan identitas (مَا، مَنْ)</li>
+                        <li>Menanyakan tempat (أَيْنَ)</li>
+                        <li>Menanyakan waktu (مَتَى)</li>
+                        <li>Menanyakan jumlah (كَمْ)</li>
+                        <li>Menanyakan cara (كَيْفَ)</li>
+                        <li>Menanyakan pilihan (أَيُّ)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- KATA TANYA DASAR -->
+            <div class="space-y-6">
+                <h3 class="text-xl font-bold text-purple-700">1. Adawatul Istifham Dasar</h3>
+
+                <div class="grid md:grid-cols-2 gap-6">
+
+                    <!-- MAA -->
+                    <div class="bg-blue-50 p-5 rounded-2xl border-l-4 border-blue-400">
+                        <div class="arabic-text text-3xl font-bold text-blue-700 mb-2">مَا</div>
+                        <p class="text-gray-700 mb-3">(maa) = apa/apakah</p>
+                        <div class="space-y-2">
+                            <p class="arabic-text text-xl">مَا هَذَا؟</p>
+                            <p class="text-sm text-gray-600 mb-2">Apa ini?</p>
+
+                            <p class="arabic-text text-xl">مَا اسْمُكَ؟</p>
+                            <p class="text-sm text-gray-600">Siapa namamu?</p>
+                        </div>
+                    </div>
+
+                    <!-- MAN -->
+                    <div class="bg-green-50 p-5 rounded-2xl border-l-4 border-green-400">
+                        <div class="arabic-text text-3xl font-bold text-green-700 mb-2">مَنْ</div>
+                        <p class="text-gray-700 mb-3">(man) = siapa</p>
+                        <div class="space-y-2">
+                            <p class="arabic-text text-xl">مَنْ هَذَا؟</p>
+                            <p class="text-sm text-gray-600 mb-2">Siapa ini?</p>
+
+                            <p class="arabic-text text-xl">مَنْ مُعَلِّمُكَ؟</p>
+                            <p class="text-sm text-gray-600">Siapa gurumu?</p>
+                        </div>
+                    </div>
+
+                    <!-- AYNA -->
+                    <div class="bg-orange-50 p-5 rounded-2xl border-l-4 border-orange-400">
+                        <div class="arabic-text text-3xl font-bold text-orange-700 mb-2">أَيْنَ</div>
+                        <p class="text-gray-700 mb-3">(aina) = di mana</p>
+                        <div class="space-y-2">
+                            <p class="arabic-text text-xl">أَيْنَ الْكِتَابُ؟</p>
+                            <p class="text-sm text-gray-600 mb-2">Di mana buku itu?</p>
+
+                            <p class="arabic-text text-xl">أَيْنَ تَسْكُنُ؟</p>
+                            <p class="text-sm text-gray-600">Di mana kamu tinggal?</p>
+                        </div>
+                    </div>
+
+                    <!-- KAM -->
+                    <div class="bg-red-50 p-5 rounded-2xl border-l-4 border-red-400">
+                        <div class="arabic-text text-3xl font-bold text-red-700 mb-2">كَمْ</div>
+                        <p class="text-gray-700 mb-3">(kam) = berapa</p>
+                        <div class="space-y-2">
+                            <p class="arabic-text text-xl">كَمْ كِتَابًا عِنْدَكَ؟</p>
+                            <p class="text-sm text-gray-600 mb-2">Berapa buku yang kamu punya?</p>
+
+                            <p class="arabic-text text-xl">كَمْ عُمْرُكَ؟</p>
+                            <p class="text-sm text-gray-600">Berapa umurmu?</p>
+                        </div>
+                    </div>
+
+                    <!-- KAIFA -->
+                    <div class="bg-teal-50 p-5 rounded-2xl border-l-4 border-teal-400">
+                        <div class="arabic-text text-3xl font-bold text-teal-700 mb-2">كَيْفَ</div>
+                        <p class="text-gray-700 mb-3">(kaifa) = bagaimana</p>
+                        <div class="space-y-2">
+                            <p class="arabic-text text-xl">كَيْفَ حَالُكَ؟</p>
+                            <p class="text-sm text-gray-600 mb-2">Bagaimana kabarmu?</p>
+
+                            <p class="arabic-text text-xl">كَيْفَ تَذْهَبُ إِلَى الْمَدْرَسَةِ؟</p>
+                            <p class="text-sm text-gray-600">Bagaimana kamu pergi ke sekolah?</p>
+                        </div>
+                    </div>
+
+                    <!-- MATAA -->
+                    <div class="bg-indigo-50 p-5 rounded-2xl border-l-4 border-indigo-400">
+                        <div class="arabic-text text-3xl font-bold text-indigo-700 mb-2">مَتَى</div>
+                        <p class="text-gray-700 mb-3">(mataa) = kapan</p>
+                        <div class="space-y-2">
+                            <p class="arabic-text text-xl">مَتَى تَذْهَبُ؟</p>
+                            <p class="text-sm text-gray-600 mb-2">Kapan kamu pergi?</p>
+
+                            <p class="arabic-text text-xl">مَتَى الاِمْتِحَانُ؟</p>
+                            <p class="text-sm text-gray-600">Kapan ujiannya?</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- KATA TANYA LANJUTAN -->
+            <div class="space-y-6">
+                <h3 class="text-xl font-bold text-purple-700">2. Kata Tanya Lanjutan</h3>
+
+                <div class="grid md:grid-cols-2 gap-6">
+
+                    <!-- AYYU -->
+                    <div class="bg-yellow-50 p-5 rounded-2xl">
+                        <h4 class="font-bold text-yellow-700 mb-3">🔍 أَيُّ (Ayyu) – yang mana</h4>
+                        <div class="space-y-3">
+                            <div class="bg-white p-3 rounded-xl border-l-4 border-yellow-400">
+                                <p class="arabic-text text-xl font-bold">أَيُّ كِتَابٍ تُرِيدُ؟</p>
+                                <p class="text-sm text-gray-600">Buku yang mana yang kamu inginkan?</p>
+                            </div>
+
+                            <div class="bg-white p-3 rounded-xl border-l-4 border-yellow-400">
+                                <p class="arabic-text text-xl font-bold">أَيُّ طَالِبٍ غَائِبٌ؟</p>
+                                <p class="text-sm text-gray-600">Siswa yang mana yang tidak hadir?</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- HAL -->
+                    <div class="bg-pink-50 p-5 rounded-2xl">
+                        <h4 class="font-bold text-pink-700 mb-3">❓ هَلْ (Hal) – Apakah (Yes/No)</h4>
+                        <div class="space-y-3">
+                            <div class="bg-white p-3 rounded-xl border-l-4 border-pink-400">
+                                <p class="arabic-text text-xl font-bold">هَلْ عِنْدَكَ قَلَمٌ؟</p>
+                                <p class="text-sm text-gray-600">Apakah kamu punya pena?</p>
+                            </div>
+
+                            <div class="bg-white p-3 rounded-xl border-l-4 border-pink-400">
+                                <p class="arabic-text text-xl font-bold">هَلْ تَفْهَمُ الدَّرْسَ؟</p>
+                                <p class="text-sm text-gray-600">Apakah kamu memahami pelajaran?</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- CONTOH SEKOLAH -->
+            <div class="space-y-6">
+                <h3 class="text-xl font-bold text-purple-700">3. Contoh Penggunaan di Sekolah</h3>
+
+                <div class="bg-gradient-to-r from-purple-50 to-indigo-50 p-6 rounded-2xl space-y-4 shadow">
+
+                    <div class="flex items-start gap-3">
+                        <span class="text-purple-600 text-2xl">👨‍🏫</span>
+                        <div>
+                            <p class="arabic-text text-xl font-bold">مَا هَذَا؟</p>
+                            <p class="text-sm text-gray-600">Apa ini?</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-3">
+                        <span class="text-indigo-600 text-2xl">👨‍🎓</span>
+                        <div>
+                            <p class="arabic-text text-xl font-bold">هَذَا كِتَابٌ</p>
+                            <p class="text-sm text-gray-600">Ini buku</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-3">
+                        <span class="text-purple-600 text-2xl">👨‍🏫</span>
+                        <div>
+                            <p class="arabic-text text-xl font-bold">أَيْنَ قَلَمُكَ؟</p>
+                            <p class="text-sm text-gray-600">Di mana penamu?</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-3">
+                        <span class="text-indigo-600 text-2xl">👨‍🎓</span>
+                        <div>
+                            <p class="arabic-text text-xl font-bold">قَلَمِي فِي الْحَقِيبَةِ</p>
+                            <p class="text-sm text-gray-600">Penaku di dalam tas</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- KAIDAH PENTING -->
+            <div class="space-y-6">
+                <h3 class="text-xl font-bold text-purple-700">4. Kaidah Penting</h3>
+
+                <div class="grid md:grid-cols-2 gap-6">
+
+                    <div class="bg-yellow-50 p-6 rounded-xl shadow">
+                        <h4 class="font-semibold text-yellow-700 mb-3">⚠️ Penting diingat:</h4>
+                        <ul class="text-gray-700 text-sm space-y-2">
+                            <li><strong>مَا</strong> = benda / identitas</li>
+                            <li><strong>مَنْ</strong> = orang</li>
+                            <li><strong>أَيْنَ</strong> = tempat</li>
+                            <li><strong>كَمْ</strong> = jumlah</li>
+                            <li><strong>كَيْفَ</strong> = cara / keadaan</li>
+                            <li><strong>مَتَى</strong> = waktu</li>
+                            <li><strong>هَلْ</strong> = pertanyaan ya/tidak</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-green-50 p-6 rounded-xl shadow">
+                        <h4 class="font-semibold text-green-700 mb-3">✅ Contoh Benar</h4>
+
+                        <div class="space-y-3">
+                            <div class="p-3 bg-white rounded border-l-4 border-green-400">
+                                <p class="arabic-text font-bold">مَا لَوْنُ قَلَمِكَ؟</p>
+                                <p class="text-gray-600 text-sm">Apa warna penamu?</p>
+                            </div>
+
+                            <div class="p-3 bg-white rounded border-l-4 border-green-400">
+                                <p class="arabic-text font-bold">مَنْ صَدِيقُكَ؟</p>
+                                <p class="text-gray-600 text-sm">Siapa temanmu?</p>
+                            </div>
+
+                            <div class="p-3 bg-white rounded border-l-4 border-green-400">
+                                <p class="arabic-text font-bold">هَلْ تُحِبُّ الرِّيَاضِيَّاتِ؟</p>
+                                <p class="text-gray-600 text-sm">Apakah kamu suka matematika?</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- LATIHAN -->
+            <div class="space-y-6">
+                <h3 class="text-xl font-bold text-purple-700">5. Latihan</h3>
+
+                <div class="bg-purple-50 p-6 rounded-xl shadow space-y-4">
+
+                    <div class="p-3 bg-white rounded border-l-4 border-purple-400">
+                        <p class="arabic-text text-xl font-bold">مَا اسْمُ هَذِهِ الْمَدْرَسَةِ؟</p>
+                        <p class="text-sm text-gray-600">Identifikasi: <strong>مَا</strong> = menanyakan identitas</p>
+                    </div>
+
+                    <div class="p-3 bg-white rounded border-l-4 border-purple-400">
+                        <p class="arabic-text text-xl font-bold">أَيْنَ تَضَعُ كُتُبَكَ؟</p>
+                        <p class="text-sm text-gray-600">Identifikasi: <strong>أَيْنَ</strong> = menanyakan tempat</p>
+                    </div>
+
+                    <div class="p-3 bg-white rounded border-l-4 border-purple-400">
+                        <p class="arabic-text text-xl font-bold">كَمْ طَالِبًا فِي فَصْلِكَ؟</p>
+                        <p class="text-sm text-gray-600">Identifikasi: <strong>كَمْ</strong> = menanyakan jumlah</p>
+                    </div>
+
+                </div>
+
+                <!-- ============================
+        PDF VIEWER – BAB 3
+   ============================ -->
+<div class="card glass rounded-3xl p-8 shadow-xl mt-10">
+
+    <h2 class="text-2xl font-bold mb-4 text-purple-700">
+        📘 Materi PDF Bab 3 – Adawatul Istifham (Kata Tanya)
+    </h2>
+
+    <p class="text-gray-700 mb-4">
+        Silakan baca materi lengkap Bab 3 dalam format PDF berikut:
+    </p>
+
+    <div class="w-full h-[600px] rounded-2xl overflow-hidden shadow-lg border-2 border-purple-300">
+        <iframe 
+            src="../pdf/kaidah-3.pdf"
+            class="w-full h-full"
+            frameborder="0">
+        </iframe>
     </div>
+
 </div>
 
             </div>
+
         </div>
+    </div>
+</div>
+
+
+
+
+        <!-- ============================
+      SECTION BACAAN — BAB 3
+   ============================ -->
+<div id="section-bacaan" class="tab-content hidden">
+
+    <!-- Judul -->
+    <div class="card glass rounded-3xl p-8 shadow-xl animate-fadeInUp">
+        <h2 class="text-3xl font-bold gradient-text mb-6">📖 Materi Lengkap: Adawatul Madrasah (Peralatan Sekolah)</h2>
+
+        <!-- Cerita -->
+        <h3 class="text-xl font-bold mb-4">Peralatan Sekolah yang Penting</h3>
+        <p class="text-gray-700 mb-6 leading-relaxed">
+            Setiap siswa membutuhkan peralatan sekolah untuk menunjang pembelajaran. 
+            Mari kita pelajari nama-nama peralatan tersebut dalam bahasa Arab.
+        </p>
+
+        <h4 class="text-lg font-semibold mb-3">Cerita Singkat: الحقيبة المدرسية (Tas Sekolah)</h4>
+
+        <div class="bg-purple-50 p-6 rounded-lg mb-6 border-l-4 border-purple-500">
+            <div class="arabic-text text-lg leading-relaxed mb-4">
+                اسْتَيْقَظَتْ لَيْلَى مُبَكِّرًا لِلذَّهَابِ إِلَى الْمَدْرَسَةِ...  
+                <br><br>
+                بَعْدَ انْتِهَاءِ الدَّرْسِ، رَتَّبَتْ لَيْلَى أَدَوَاتَهَا فِي الْحَقِيبَةِ بِعِنَايَةٍ. 
+                تَعَلَّمَتْ أَنَّ تَرْتِيبَ الأَدَوَاتِ الْمَدْرَسِيَّةِ مُهِمٌّ جِدًّا لِلنَّجَاحِ فِي الدِّرَاسَةِ.
+            </div>
+
+            <h5 class="font-semibold mb-3 text-purple-700">📖 Terjemahan:</h5>
+            <p class="text-gray-700 leading-relaxed">
+                Laila bangun pagi untuk pergi ke sekolah. Dia mulai menyiapkan tas sekolahnya...
+                <br><br>
+                Setelah pelajaran selesai, Laila merapikan alat-alatnya di tas dengan hati-hati.
+                Ia belajar bahwa mengatur peralatan sekolah sangat penting untuk sukses dalam belajar.
+            </p>
+        </div>
+
+        <!-- Peralatan Sekolah -->
+        <h4 class="text-lg font-semibold mb-3">Peralatan Tulis:</h4>
+        <ul class="list-disc list-inside mb-6 space-y-2">
+            <li><strong>الْقَلَمُ</strong> — Pena atau pulpen</li>
+            <li><strong>الْقَلَمُ الرَّصَاصُ</strong> — Pensil</li>
+            <li><strong>الْمِمْحَاةُ</strong> — Penghapus</li>
+            <li><strong>الْمِسْطَرَةُ</strong> — Penggaris</li>
+            <li><strong>الْمِبْرَاةُ</strong> — Serutan pensil</li>
+        </ul>
+
+        <!-- Dialog -->
+        <h4 class="text-lg font-semibold mb-3">Meminjam Peralatan:</h4>
+
+        <div class="bg-gray-100 p-4 rounded-lg mb-6">
+            <p class="arabic-text text-lg mb-2">هَلْ عِنْدَكَ قَلَمٌ؟</p>
+            <p class="text-sm text-gray-600 mb-4">Apakah kamu punya pena?</p>
+
+            <p class="arabic-text text-lg mb-2">أَعْطِنِي الْقَلَمَ مِنْ فَضْلِكَ</p>
+            <p class="text-sm text-gray-600 mb-4">Tolong berikan pena itu</p>
+
+            <p class="arabic-text text-lg mb-2">تَفَضَّلْ</p>
+            <p class="text-sm text-gray-600">Silakan</p>
+        </div>
+
+        <!-- Latihan Membaca -->
+        <h4 class="text-lg font-semibold mb-3">Latihan Membaca:</h4>
+        <ul class="list-disc list-inside mb-6 space-y-2">
+            <li><strong>هَذَا كِتَابِي</strong> — Ini bukuku</li>
+            <li><strong>أَيْنَ حَقِيبَتُكَ؟</strong> — Di mana tasmu?</li>
+            <li><strong>الْقَلَمُ فِي الْحَقِيبَةِ</strong> — Pena di dalam tas</li>
+        </ul>
+
+        <!-- ============================
+              PDF VIEWER — BAB 3
+        ============================ -->
+        <div class="mt-10">
+            <h3 class="text-2xl font-bold mb-4 text-purple-700">📘 PDF Materi Bab 3</h3>
+
+            <div class="w-full h-[600px] rounded-2xl overflow-hidden shadow-lg border-2 border-purple-300">
+                <iframe 
+                    src="../pdf/teks bacaan adawatu.pdf"
+                    class="w-full h-full"
+                    frameborder="0">
+                </iframe>
+            </div>
+        </div>
+
+    </div>
+</div>
+
 
         <!-- Video Section -->
         <div id="section-video" class="tab-content hidden">
