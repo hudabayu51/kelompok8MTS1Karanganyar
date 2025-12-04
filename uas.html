@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UAS Bahasa Arab Bab 4–6</title>
+<script src="https://cdn.tailwindcss.com"></script>
+
+<style>
+    body { font-family: "Poppins", sans-serif; }
+    .option-btn {
+        padding: 12px;
+        border-radius: 12px;
+        background: #f1f5f9;
+        transition: 0.3s;
+        cursor: pointer;
+    }
+    .option-btn:hover {
+        background: #e2e8f0;
+        transform: scale(1.02);
+    }
+    .correct { background-color: #bbf7d0 !important; }
+    .wrong { background-color: #fecaca !important; }
+</style>
+</head>
+
+<body class="bg-gradient-to-br from-teal-50 via-purple-50 to-pink-50 min-h-screen">
+
+<header class="bg-gradient-to-r from-teal-600 via-blue-600 to-purple-600 text-white py-10 shadow-xl">
+    <h1 class="text-4xl font-bold text-center">📝 UAS Bahasa Arab – Bab 4 sampai 6</h1>
+    <p class="text-center opacity-90 mt-2">Terdiri dari 20 soal pilihan ganda</p>
+</header>
+
+<main class="max-w-3xl mx-auto px-6 py-10">
+
+<div id="quiz-box" class="bg-white shadow-xl rounded-3xl p-8">
+
+    <h2 id="question-number" class="text-xl font-bold mb-3"></h2>
+    <p id="question-text" class="text-lg mb-6"></p>
+
+    <div id="options" class="space-y-3"></div>
+
+    <p id="feedback" class="mt-4 font-bold text-lg"></p>
+
+    <button id="next-btn"
+        onclick="nextQuestion()"
+        class="mt-6 px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-xl shadow hover:scale-105 transition">
+        Soal Selanjutnya ➡
+    </button>
+
+</div>
+
+<!-- HASIL -->
+<div id="result-box" class="hidden text-center bg-white shadow-xl rounded-3xl p-10 mt-10">
+    <h2 class="text-3xl font-bold mb-4">🎉 Ujian Selesai!</h2>
+    <p id="score-text" class="text-xl font-semibold mb-6"></p>
+
+    <a href="menu_bab.html"
+       class="inline-block px-8 py-4 bg-gradient-to-r from-pink-600 to-purple-600 text-white rounded-full shadow-xl hover:scale-105 transition">
+        ⬅ Kembali ke Menu Bab
+    </a>
+</div>
+
+</main>
+
+<script>
+
+// ===========================
+//   20 SOAL CAMPUR BAB 4–6
+// ===========================
+const questions = [
+
+    // BAB 4 – Al-Unwān (Alamat)
+    { q: "Apa arti: شَارِعٌ", options: ["Jalan", "Rumah", "Kota"], answer: 0 },
+    { q: "Apa arti: مَدِينَةٌ", options: ["Kota", "Desa", "Negara"], answer: 0 },
+    { q: "Apa arti: حَيٌّ", options: ["Kampung/daerah", "Rumah besar", "Gang"], answer: 0 },
+    { q: "Apa arti: بَيْتِي فِي شَارِعِ النُّورِ", options: ["Rumahku di Jalan An-Nur", "Rumahku sangat besar", "Rumahku dekat sekolah"], answer: 0 },
+    { q: "Apa arti: رَقْمُ البَيْتِ", options: ["Nomor rumah", "Alamat lengkap", "Nomor telepon"], answer: 0 },
+
+    // BAB 5 – Rumah & Bagian Rumah
+    { q: "Apa arti: مَطْبَخٌ", options: ["Dapur", "Ruang makan", "Kamar tidur"], answer: 0 },
+    { q: "Apa arti: غُرْفَةُ النَّوْمِ", options: ["Kamar tidur", "Ruang tamu", "Kamar mandi"], answer: 0 },
+    { q: "Apa arti: سَلَّمٌ", options: ["Tangga", "Atap", "Dinding"], answer: 0 },
+    { q: "Apa arti: غُرْفَةُ الْجُلُوسِ", options: ["Ruang tamu", "Gudang", "Ruang makan"], answer: 0 },
+    { q: "Apa arti: حَمَّامٌ", options: ["Kamar mandi", "Dapur", "Ruang keluarga"], answer: 0 },
+
+    // BAB 6 – Keluarga
+    { q: "Apa arti: أَبٌ", options: ["Ayah", "Kakek", "Paman"], answer: 0 },
+    { q: "Apa arti: أُمٌّ", options: ["Ibu", "Bibi", "Anak perempuan"], answer: 0 },
+    { q: "Apa arti: أَخٌ", options: ["Saudara laki-laki", "Anak laki-laki", "Ayah"], answer: 0 },
+    { q: "Apa arti: أُخْتٌ", options: ["Saudara perempuan", "Ibu", "Bibi"], answer: 0 },
+    { q: "Apa arti: جَدٌّ", options: ["Kakek", "Cicit", "Paman"], answer: 0 },
+
+    // Tambahan campuran bab 4–6
+    { q: "Apa arti: جَدَّةٌ", options: ["Nenek", "Bibi", "Anak perempuan"], answer: 0 },
+    { q: "Apa arti: بَيْتٌ", options: ["Rumah", "Toko", "Kamar"], answer: 0 },
+    { q: "Apa arti: شُقَّةٌ", options: ["Apartemen", "Pasar", "Taman"], answer: 0 },
+    { q: "Apa arti: أُسْرَةٌ", options: ["Keluarga", "Sekolah", "Rumah"], answer: 0 },
+    { q: "Apa arti: عُنْوَانُكَ؟", options: ["Apa alamatmu?", "Siapa namamu?", "Di mana rumahmu?"], answer: 0 },
+
+];
+
+let current = 0;
+let score = 0;
+
+// =========================
+//  LOAD SOAL
+// =========================
+function loadQuestion() {
+    const q = questions[current];
+    document.getElementById("question-number").textContent = `Soal ${current+1} dari 20`;
+    document.getElementById("question-text").textContent = q.q;
+
+    const optionsBox = document.getElementById("options");
+    optionsBox.innerHTML = "";
+
+    q.options.forEach((opt, i) => {
+        const btn = document.createElement("div");
+        btn.className = "option-btn";
+        btn.textContent = opt;
+        btn.onclick = () => checkAnswer(btn, i);
+        optionsBox.appendChild(btn);
+    });
+
+    document.getElementById("feedback").textContent = "";
+}
+
+// =========================
+// CEK JAWABAN
+// =========================
+function checkAnswer(button, choice) {
+    const correct = questions[current].answer;
+
+    if (choice === correct) {
+        score++;
+        button.classList.add("correct");
+        document.getElementById("feedback").textContent = "Benar! 🎉";
+        document.getElementById("feedback").className = "text-green-600 font-bold";
+    } else {
+        button.classList.add("wrong");
+        document.getElementById("feedback").textContent = "Salah! 😢";
+        document.getElementById("feedback").className = "text-red-600 font-bold";
+    }
+
+    document.querySelectorAll(".option-btn").forEach(btn => btn.onclick = null);
+}
+
+// =========================
+// NEXT QUESTION
+// =========================
+function nextQuestion() {
+    current++;
+
+    if (current >= questions.length) {
+        endQuiz();
+        return;
+    }
+
+    loadQuestion();
+}
+
+// =========================
+// END QUIZ
+// =========================
+function endQuiz() {
+    document.getElementById("quiz-box").classList.add("hidden");
+    document.getElementById("result-box").classList.remove("hidden");
+
+    document.getElementById("score-text").textContent = 
+        `Nilai kamu: ${score} dari 20 soal`;
+}
+
+loadQuestion();
+</script>
+
+</body>
+</html>
